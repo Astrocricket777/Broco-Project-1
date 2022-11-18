@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 
-public class PlayerMovement : NetworkBehaviour
+public class PlayerMovement1 : MonoBehaviour
 {
     [Header("References")]
     public CharacterController Controller;
@@ -24,20 +23,20 @@ public class PlayerMovement : NetworkBehaviour
 
     void Start()
     {
-        if (isOwned)
-        {
-            Cam.gameObject.SetActive(true);
-        }
+        
+        
+        Cam.gameObject.SetActive(true);
+        
 
         
     }
 
     void Update()
     {
-        if (!isOwned)
-        {
-            return;
-        }
+        
+        
+        return;
+        
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
